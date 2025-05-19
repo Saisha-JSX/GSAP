@@ -1,18 +1,46 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-html,
-body{
-    height: 100%;
-    width: 100%;
-    background-color: gray;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.box {
-    height: 300px;
-    width: 300px;
-    background-color: crimson;
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 50px;
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  color: white;
+  font-size: 3rem;
 }
