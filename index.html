@@ -2,26 +2,94 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nova Studio</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Poppins Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar" id="nav">
-    <div class="logo" id="logo">My Portfolio</div>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#about">About</a></li>
+  <nav class="navbar">
+    <div class="nav-logo">🌟 Nova Studio</div>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="#team">Team</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#feedback">Feedback</a></li>
     </ul>
   </nav>
 
-  <h1 class="hero" id="main-content">Saisha Karki</h1>
+  <!-- Hero -->
+  <header class="hero" id="hero">
+    <h1>Crafting Digital Excellence</h1>
+    <p>We turn bold ideas into beautiful and functional experiences.</p>
+  </header>
 
+  <!-- Services -->
+  <section class="section light" id="services">
+    <h2><i class="fas fa-tools"></i> Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="Web Design">
+        <h3><i class="fas fa-pencil-ruler"></i> Web Design</h3>
+        <p>Clean, responsive and visually engaging web interfaces.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="Development">
+        <h3><i class="fas fa-code"></i> Development</h3>
+        <p>Robust and scalable websites, apps and platforms.</p>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x250" alt="Branding">
+        <h3><i class="fas fa-paint-brush"></i> Branding</h3>
+        <p>Unique visual identity and messaging for your brand.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section dark pin-section" id="projects">
+    <h2><i class="fas fa-award"></i> Featured Projects</h2>
+    <div class="grid projects">
+      <img src="https://via.placeholder.com/600x400" alt="Project 1">
+      <img src="https://via.placeholder.com/600x400" alt="Project 2">
+      <img src="https://via.placeholder.com/600x400" alt="Project 3">
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="section light" id="team">
+    <h2><i class="fas fa-users"></i> Meet the Team</h2>
+    <div class="grid team">
+      <div>
+        <img src="https://via.placeholder.com/200" alt="Team member 1">
+        <p>Alex - Creative Director</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/200" alt="Team member 2">
+        <p>Jordan - Lead Developer</p>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/200" alt="Team member 3">
+        <p>Sam - UX Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section dark" id="contact">
+    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+    <p>Have a project in mind? Let’s collaborate.</p>
+  </section>
+
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

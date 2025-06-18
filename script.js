@@ -1,27 +1,44 @@
-// Create a timeline
-var tl = gsap.timeline();
+gsap.registerPlugin(ScrollTrigger);
 
-// Animate the logo
-tl.from("#logo", {
-  y: -20,
+// Animate hero text
+gsap.from(".hero h1", {
   opacity: 0,
-  duration: 0.8,
-  delay: 0.5
+  y: -60,
+  duration: 1.2,
+  ease: "power3.out"
 });
 
-// Animate the nav links
-tl.from("#nav-links li", {
-  y: -20,
+gsap.from(".hero p", {
   opacity: 0,
-  duration: 0.8,
-  stagger: 0.2
-});
-
-// Animate the main content (hero text)
-tl.from("#main-content", {
-  y: 20,
-  opacity: 0,
+  y: 30,
+  delay: 0.4,
   duration: 1,
-  scale: 0.95,
-  ease: "power2.out"
+  ease: "power3.out"
+});
+
+// Scroll-triggered animations for each section
+gsap.utils.toArray(".section").forEach((section, index) => {
+  gsap.from(section, {
+    scrollTrigger: {
+      trigger: section,
+      start: "top 90%",
+      end: "top 30%",
+      scrub: true
+    },
+    opacity: 0,
+    y: 150,
+    scale: 0.85,
+    rotation: index % 2 === 0 ? 2 : -2,
+    duration: 1.5
+  });
+});
+
+// Pin Projects section
+ScrollTrigger.create({
+  trigger: "#projects",
+  start: "top top",
+  end: "+=500",
+  pin: true,
+  scrub: true,
+  pinSpacing: true
 });
