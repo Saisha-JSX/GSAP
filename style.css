@@ -1,41 +1,32 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #fff;
-  color: #111;
+  margin: 0;
+  background: #121212;
+  color: #eee;
   scroll-behavior: smooth;
-  line-height: 1.6;
-  transition: background-color 1s ease;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  border-radius: 10px;
 }
 
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
-  background: #111;
-  padding: 20px 60px;
+  background: #1f1f1f;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  padding: 15px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
 }
 
 .nav-logo {
-  color: #0ff;
   font-weight: 700;
-  font-size: 1.4rem;
-  transition: box-shadow 0.3s ease;
+  font-size: 1.8rem;
+  color: #00d8ff;
 }
 
 .nav-links {
@@ -45,104 +36,305 @@ img {
 }
 
 .nav-links a {
+  color: #eee;
   text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  transition: color 0.3s, text-shadow 0.3s;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #0ff;
-  text-shadow: 0 0 8px #0ff;
-}
-
-.hero {
-  height: 100vh;
-  background: linear-gradient(135deg, #0f0f0f, #222);
-  color: #fff;
-  text-align: center;
-  padding: 100px 30px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 15px;
+  color: #00d8ff;
 }
 
 .section {
-  padding: 100px 60px;
   min-height: 100vh;
+  padding: 120px 30px 60px; /* top padding accounts for navbar */
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-section {
+  background: linear-gradient(135deg, #00d8ff, #004466);
+  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
-  transition: background-color 1s ease, color 1s ease;
 }
 
-.section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+.intro-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
-.section p {
-  max-width: 700px;
+.intro-section p {
+  font-size: 1.3rem;
+  max-width: 500px;
   margin: 0 auto;
+  line-height: 1.5;
+}
+
+.animation-section {
+  background: #1e1e1e;
+  border-radius: 15px;
+  margin-bottom: 60px;
+  box-shadow: 0 0 15px rgba(0, 216, 255, 0.3);
+  padding: 60px 20px 40px;
+}
+
+.animation-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: #00d8ff;
+}
+
+.animation-section p {
   font-size: 1.1rem;
+  margin-top: 25px;
+  color: #ccc;
 }
 
-.grid {
-  display: grid;
-  gap: 40px;
-  margin-top: 40px;
+/* Shapes styling */
+.card {
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  background: #00d8ff;
+  filter: drop-shadow(0 0 6px #00d8ff);
 }
 
-.grid.projects {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+/* Circle */
+.circle {
+  border-radius: 50%;
 }
 
-.grid.team {
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+/* Square (default card shape, no changes) */
+
+/* Triangle */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-bottom: 130px solid #00d8ff;
+  background: none;
+  filter: drop-shadow(0 0 6px #00d8ff);
+  margin: 0 auto;
+}
+
+/* Hexagon */
+.hexagon {
+  position: relative;
+  width: 130px;
+  height: 75px;
+  background: #00d8ff;
+  margin: 0 auto;
+  clip-path: polygon(
+    25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%
+  );
+  filter: drop-shadow(0 0 6px #00d8ff);
+}
+
+/* Diamond */
+.diamond {
+  width: 120px;
+  height: 120px;
+  background: #00d8ff;
+  transform: rotate(45deg);
+  margin: 0 auto;
+  filter: drop-shadow(0 0 6px #00d8ff);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 10px;
+  background: #111;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Add this to your existing CSS */
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(45deg, #0077b6, #00d8ff);
+  color: white;
+  padding: 120px 30px 80px;
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 0 25px rgba(0, 216, 255, 0.5);
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 10px auto;
+  line-height: 1.6;
+}
+
+/* Animations Grid */
+.animations-grid, .othershows-section {
+  max-width: 900px;
+  margin: 0 auto 80px;
   text-align: center;
 }
 
-.grid.team p {
-  margin-top: 10px;
+.animations-grid h2, .othershows-section h2 {
+  font-size: 2.5rem;
+  color: #00d8ff;
+  margin-bottom: 25px;
 }
 
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* Smaller cards */
 .card {
-  background: #fff;
-  color: #111;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  perspective: 1000px;
+  width: 100px;
+  height: 100px;
+  background: #00d8ff;
+  filter: drop-shadow(0 0 6px #00d8ff);
+  cursor: default;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
 }
 
 .card:hover {
-  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.15);
+  transform: scale(1.15);
 }
 
-/* Section Themes */
-.section.dark {
-  background: #111;
-  color: #fff;
+/* Adjust shapes sizes accordingly */
+
+/* Circle */
+.circle {
+  border-radius: 50%;
 }
 
-.section.light {
-  background: #f9f9f9;
-  color: #111;
+/* Square is default */
+
+/* Triangle */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 87px solid #00d8ff;
+  background: none;
+  filter: drop-shadow(0 0 6px #00d8ff);
+  margin: 0 auto;
+  border-radius: 0;
 }
 
-.pin-section {
-  background: #000;
-  color: #0ff;
+/* Hexagon */
+.hexagon {
+  position: relative;
+  width: 87px;
+  height: 50px;
+  background: #00d8ff;
+  margin: 0 auto;
+  clip-path: polygon(
+    25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%
+  );
+  filter: drop-shadow(0 0 6px #00d8ff);
+  border-radius: 5px;
 }
 
-.word {
-  display: inline-block;
-  white-space: nowrap;
+/* Diamond */
+.diamond {
+  width: 80px;
+  height: 80px;
+  background: #00d8ff;
+  transform: rotate(45deg);
+  margin: 0 auto;
+  filter: drop-shadow(0 0 6px #00d8ff);
+  border-radius: 5px;
+}
+
+/* New shapes */
+
+/* Star */
+.star {
+  position: relative;
+  display: block;
+  color: #00d8ff;
+  width: 100px;
+  height: 100px;
+  background: none;
+  margin: 0 auto;
+}
+
+.star::before, .star::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 45px;
+  width: 10px;
+  height: 40px;
+  background: #00d8ff;
+  transform-origin: center;
+  filter: drop-shadow(0 0 6px #00d8ff);
+}
+
+.star::before {
+  transform: rotate(35deg);
+}
+
+.star::after {
+  transform: rotate(-35deg);
+}
+
+/* Heart */
+.heart {
+  position: relative;
+  width: 100px;
+  height: 90px;
+  background: #00d8ff;
+  margin: 0 auto;
+  clip-path: polygon(
+    50% 15%, 61% 12%, 75% 20%, 85% 35%, 85% 55%, 50% 90%, 15% 55%, 15% 35%, 25% 20%, 39% 12%
+  );
+  filter: drop-shadow(0 0 6px #00d8ff);
+  border-radius: 10px;
+}
+
+/* Blob (simple morphable shape) */
+.blob {
+  width: 100px;
+  height: 100px;
+  background: #00d8ff;
+  border-radius: 50% 40% 60% 50% / 60% 50% 70% 50%;
+  filter: drop-shadow(0 0 6px #00d8ff);
+  margin: 0 auto;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .animations-grid h2, .othershows-section h2 {
+    font-size: 2rem;
+  }
 }

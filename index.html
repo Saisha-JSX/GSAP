@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nova Studio</title>
+  <title>Nova Studio - GSAP Animations</title>
   <link rel="stylesheet" href="style.css" />
   <!-- Poppins Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,78 +14,54 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="nav-logo">🌟 Nova Studio</div>
+    <div class="nav-logo">GSAP Animations</div>
     <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#team">Team</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#hero">Hero</a></li>
+      <li><a href="#intro">Intro</a></li>
+      <li><a href="#animations">Animations</a></li>
+      <li><a href="#othershows">Other Shows</a></li>
     </ul>
   </nav>
 
-  <!-- Hero -->
-  <header class="hero" id="hero">
-    <h1 class="split-text">Crafting Digital Excellence</h1>
-    <p>We turn bold ideas into beautiful and functional experiences.</p>
+  <!-- Hero Section -->
+  <section id="hero" class="section hero-section">
+    <h1>What is GSAP?</h1>
+    <p>GSAP (GreenSock Animation Platform) is a powerful JavaScript library for creating high-performance, professional-grade animations that work in all major browsers. It makes animating HTML, SVG, canvas, and more simple, smooth, and fun!</p>
+    <p>Explore the animations below to see GSAP in action!</p>
+  </section>
+
+  <!-- Intro Section -->
+  <header id="intro" class="section intro-section">
+    <h2>Welcome to GSAP Animation Showcase</h2>
+    <p>Discover different GSAP animation types demonstrated on unique shapes.</p>
   </header>
 
-  <!-- Services -->
-  <section class="section light" id="services">
-    <h2><i class="fas fa-tools"></i> Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250" alt="Web Design">
-        <h3><i class="fas fa-pencil-ruler"></i> Web Design</h3>
-        <p>Clean, responsive and visually engaging web interfaces.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250" alt="Development">
-        <h3><i class="fas fa-code"></i> Development</h3>
-        <p>Robust and scalable websites, apps and platforms.</p>
-      </div>
-      <div class="card">
-        <img src="https://via.placeholder.com/400x250" alt="Branding">
-        <h3><i class="fas fa-paint-brush"></i> Branding</h3>
-        <p>Unique visual identity and messaging for your brand.</p>
-      </div>
+  <!-- Animations Grid -->
+  <section id="animations" class="section animations-grid">
+    <h2>Animations</h2>
+    <div class="cards-grid">
+      <div class="card circle" id="fadeShape" title="Fade Animation"></div>
+      <div class="card square" id="slideShape" title="Slide Animation"></div>
+      <div class="card triangle" id="scaleShape" title="Scale Animation"></div>
+      <div class="card hexagon" id="rotateShape" title="Rotate Animation"></div>
+      <div class="card diamond" id="bounceShape" title="Bounce Animation"></div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="section dark pin-section" id="projects">
-    <h2><i class="fas fa-award"></i> Featured Projects</h2>
-    <div class="grid projects">
-      <img src="https://via.placeholder.com/600x400" alt="Project 1">
-      <img src="https://via.placeholder.com/600x400" alt="Project 2">
-      <img src="https://via.placeholder.com/600x400" alt="Project 3">
+  <!-- Other Shows Section -->
+  <section id="othershows" class="section othershows-section">
+    <h2>Other GSAP Shows</h2>
+    <div class="cards-grid">
+      <div class="card star" id="starShape" title="Star Pulse"></div>
+      <div class="card heart" id="heartShape" title="Heart Beat"></div>
+      <div class="card blob" id="blobShape" title="Morph Blob"></div>
     </div>
+    <p>Check out some more creative GSAP demos with different shapes and effects.</p>
   </section>
 
-  <!-- Team -->
-  <section class="section light" id="team">
-    <h2><i class="fas fa-users"></i> Meet the Team</h2>
-    <div class="grid team">
-      <div>
-        <img src="https://via.placeholder.com/200" alt="Team member 1">
-        <p>Alex - Creative Director</p>
-      </div>
-      <div>
-        <img src="https://via.placeholder.com/200" alt="Team member 2">
-        <p>Jordan - Lead Developer</p>
-      </div>
-      <div>
-        <img src="https://via.placeholder.com/200" alt="Team member 3">
-        <p>Sam - UX Designer</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="section dark" id="contact">
-    <h2><i class="fas fa-envelope"></i> Contact Us</h2>
-    <p>Have a project in mind? Let’s collaborate.</p>
-  </section>
+  <footer class="footer">
+    <p>Created by ChatGPT &bull; Learn GSAP Animations</p>
+  </footer>
 
   <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
