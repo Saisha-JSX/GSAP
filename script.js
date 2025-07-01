@@ -100,3 +100,37 @@ document.querySelectorAll(".card").forEach(card => {
     card.style.transform = "rotateX(0deg) rotateY(0deg)";
   });
 });
+
+// === New Animation: Background color transition on scroll === //
+gsap.utils.toArray(".section").forEach((section, i, sections) => {
+  if(i < sections.length - 1) { // skip last section
+    ScrollTrigger.create({
+      trigger: section,
+      start: "bottom bottom",
+      end: () => "+=" + window.innerHeight,
+      onEnter: () => {
+        gsap.to("body", {
+          backgroundColor: window.getComputedStyle(sections[i + 1]).backgroundColor,
+          duration: 1,
+          ease: "power1.inOut"
+        });
+      },
+      onLeaveBack: () => {
+        gsap.to("body", {
+          backgroundColor: window.getComputedStyle(section).backgroundColor,
+          duration: 1,
+          ease: "power1.inOut"
+        });
+      }
+    });
+  }
+});
+
+// === New Animation: Glowing pulsing effect on navbar logo === //
+gsap.to(".nav-logo", {
+  boxShadow: "0 0 15px 5px #0ff",
+  repeat: -1,
+  yoyo: true,
+  ease: "power1.inOut",
+  duration: 2
+});
